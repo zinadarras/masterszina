@@ -1,11 +1,169 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    
-</body>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <table>
+      <tr>
+        <td>
+          <h2>Login Panel</h2>
+
+          <button
+            onclick="document.getElementById('id01').style.display='block'"
+            style="width: auto"
+          >
+            Login
+          </button>
+
+          <div id="id01" class="modal">
+            <form
+              class="modal-content animate"
+              action="/action_page.php"
+              method="post"
+            >
+              <div class="imgcontainer">
+                <span
+                  onclick="document.getElementById('id01').style.display='none'"
+                  class="close"
+                  title="Close Modal"
+                  >&times;</span
+                >
+
+                <div class="Div1">
+                  <img src="1.png" alt="Logo" class="Logo" />
+                </div>
+              </div>
+
+              <div class="container">
+                <label for="uname"><b class="Signin">Sign in</b></label>
+                <br />
+                <div class="form-field">
+                  <input
+                    type="text"
+                    placeholder="   Enter Username"
+                    name="uname"
+                    class="input-with-logo"
+                    required
+                  />
+                </div>
+                <br />
+                <div class="input-with-logo-container">
+                  <input
+                    type="password"
+                    placeholder="Enter Password"
+                    name="psw"
+                    required
+                  />
+                </div>
+                <div class="container">
+                  <span class="psw">
+                    <a
+                      href="https://www.youtube.com"
+                      id="Forg"
+                      style="color: rgb(47, 123, 31)"
+                      ><b>Forgotten Password?</b></a
+                    >
+                  </span>
+                </div>
+                <br />
+                <button type="submit" id="Submit">Sign in</button>
+                <br />
+
+                <label>
+                  <input type="checkbox" checked="checked" name="remember" />
+                  Remember me
+                </label>
+              </div>
+              <div class="Div2">
+                <br />
+                <p>Or sign in With</p>
+                <a
+                  href="https://mail.google.com/mail/?view=cm&fs=1&tf=1&to=someone@example.com"
+                  target="_blank"
+                >
+                  <img src="Gmail.png" alt="Gmail" id="Gmail" />
+                </a>
+                <p>
+                  Don't have account ?
+                  <a href="www.signup.com" style="color: rgb(47, 123, 31)"
+                    ><b> Sign Up</b>
+                  </a>
+                </p>
+              </div>
+            </form>
+          </div>
+        </td>
+        <td>
+          <h2>Content Panel</h2>
+
+          <button
+            onclick="document.getElementById('id02').style.display='block'"
+            style="width: auto"
+          >
+            Content
+          </button>
+
+          <div id="id02" class="modal">
+            <form
+              class="modal-content animate"
+              action="/action_page.php"
+              method="post"
+            >
+              <div class="imgcontainer">
+                <span
+                  onclick="document.getElementById('id02').style.display='none'"
+                  class="close"
+                  title="Close Modal"
+                  >&times;</span>
+
+              </div>
+              <div class="container">
+                <label for="uname"><b class="Signin">Content Panel</b></label>
+                <br/>
+                <div class="Div3">
+                  
+                  <label for="Text" >
+                    <div class="Text1"><b>Rasberries</b>
+                    
+                  <p>
+                    Start date : 12/05/2023
+                    <br>
+                    Harvest date : 20/11/2023
+                    <br>
+                    Weight : 125g
+                  </p></div>
+                  <img src="Rasb.png" alt="Berries" class="Berries">
+                  </label>
+                </div>
+                <div class="Div4">
+                  <label for="Farm Location">
+                    <b class="Text2">Farm Location</b>
+                  
+              </label>
+                </div>
+                <div class="Location">
+                  <iframe>
+                    
+                  </iframe>
+                </div>
+                  
+            </form>
+          </div>
+        </td>
+      </tr>
+    </table>
+    <script>
+      // Get the modal
+      var modal = document.getElementById("id02");
+
+      // When the user clicks anywhere outside of the modal, close it
+      window.onclick = function (event) {
+        if (event.target == modal) {
+          modal.style.display = "none";
+        }
+      };
+    </script>
+  </body>
 </html>
